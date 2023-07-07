@@ -1,0 +1,77 @@
+body{
+  margin: 0;
+}
+
+.appContainer{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: center;
+  background-color: black;
+}
+
+.addTodoContainer{
+  padding: 20px;
+}
+
+.inpTodo{
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: aqua;
+  background-color: transparent;
+  height: 25px;  
+  color: white;
+  width: 50vw;
+
+}
+
+.inpTodo:focus{
+  outline: none;
+  caret-color: aliceblue;
+}
+
+.btnAddTodo{
+  border-radius: 10px;
+  margin-left: 10px;
+  width: 75px;
+  background-color: transparent;
+  border-color: aqua;
+  color: white;
+  transition: background-color 0.3s ease;
+  height: 30px;
+}
+
+.btnAddTodo:hover{
+  background-color: rgb(5, 142, 142);
+  cursor: pointer;
+}
+
+.todoItemContainer{
+  display: flex;
+  align-items: center;
+}
+
+.txtTodoItem{
+  color: white;
+  font-size: larger;
+}
+
+.btnTodoDelete{
+  margin-right: 10px;
+}
+
+.trashIcon{
+  color: red;
+  margin-right: 10px;
+  opacity: 40%;
+  transition: opacity 0.3s ease;
+  font-size: larger;
+  margin-top: 5px;
+}
+
+.trashIcon:hover{
+  cursor: pointer;
+  opacity: 100%;
+}
