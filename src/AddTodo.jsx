@@ -25,10 +25,13 @@ export default function AddTodo(){
         <div className="addTodoContainer">
             <input className="inpTodo" type="text" onChange={handleChange} onKeyDown={(e) => (e.key === 'Enter') ? handleClick() : false} value={newTodo}></input>
             <button className="btnAddTodo" type="button" onClick={handleClick}>Add</button>
-            { todo.map( (item, index) => {
-                return <TodoItem todo={item} keyVal={index} onDelete={() => handleDelete(index)} />
-            }) 
-            }
+            <div className="todoItemContainer">
+                { todo.map( (item, index) => {
+                    return <TodoItem todo={item} keyVal={index} onDelete={() => handleDelete(index)} />
+                }) 
+                }
+            </div>
+
         </div>
     )
 }
