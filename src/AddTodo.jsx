@@ -21,13 +21,24 @@ export default function AddTodo(){
         updatedTodos.splice(index, 1);
         setTodo(updatedTodos);
     }
+
+    const handleEdit = (index) => {
+        let todos = [...todo];
+        let newVal = prompt("Edit:", "");
+        if (newVal !== ""){
+            todos[index] = newVal;
+            setTodo(todos);
+        }
+        
+
+    }
     return (
         <div className="addTodoContainer">
             <input className="inpTodo" type="text" onChange={handleChange} onKeyDown={(e) => (e.key === 'Enter') ? handleClick() : false} value={newTodo}></input>
             <button className="btnAddTodo" type="button" onClick={handleClick}>Add</button>
             <div className="todoItemContainer">
                 { todo.map( (item, index) => {
-                    return <TodoItem todo={item} keyVal={index} onDelete={() => handleDelete(index)} />
+                    return <TodoItem todo={item} keyVal={index} onDelete={() => handleDelete(index)} onEdit={() => handleEdit(index)}/>
                 }) 
                 }
             </div>

@@ -110,3 +110,17 @@ body{
   cursor: pointer;
   opacity: 100%;
 }
+
+.editIcon{
+  color: grey;
+  margin-right: 10px;
+  opacity: 40%;
+  transition: opacity 0.3s ease;
+  font-size: larger;
+  margin-top: 5px;
+}
+
+.editIcon:hover{
+  cursor: pointer;
+  opacity: 100%;
+}
